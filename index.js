@@ -4,6 +4,9 @@ const app = express();
 app.use(express.json());
 
 let orders = [];
+app.get('/', (req, res) => {
+  res.send('API is running');
+});
 
 app.post('/order', (req, res) => {
   orders.push(req.body);
